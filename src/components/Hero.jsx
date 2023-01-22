@@ -1,0 +1,26 @@
+import React from 'react'
+
+const Hero = ({hero:{title,subtitle,text,btn1,btn2,img}}) => {
+  return (
+    <div>
+        <div className='flex flex-col bg-gradient-to-b from-emerald-200 to-white h-auto w-auto  overflow-hidden'>
+            <div className='trivago-container grid items-start justify-items-center '>
+                <div className='grid items-center justify-items-center mt-36 mb-16 md:mt-28 md:mb-12 '>
+                    <h1 className='text-7xl font-bold lg:text-6xl md:text-5xl sm:text-4xl xsm:text-3xl filter drop-shadow-lg'>{title}</h1>
+                    <h1 className='text-7xl font-bold lg:text-6xl md:text-5xl sm:text-4xl xsm:text-3xl filter drop-shadow-lg'>{subtitle}</h1>
+                    <p className='text-base my-5 text-center sm:text-sm'>{text}</p>
+                    <div className='flex sm:flex-col sm:w-full justify-center items-center gap-11  sm:gap-3'>
+                        <button className='button-emrald'>{btn1}</button>
+                        <button className='button-light'>{btn2}</button>
+                    </div>
+                </div>
+                <div className='flex justify-center items-center mb-11 '>
+                    <img src={img} alt='dashboard/img' className='h-[85vh] w-full object-fill lg:h-[75vh] md:h-[57vh] sm:h-[35vh] sm:object-contain drop-shadow-emrald'/>
+                </div>
+            </div>
+        </div>
+    </div>
+  )
+}
+
+export default Hero
